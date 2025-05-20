@@ -25,7 +25,7 @@ struct Usuario usuario[USU];
 
 int verificacao(int entrada, int tamanhoEsperado, char *nome){  //verifica se determinada variavel tem um numero expecifico
 	if (entrada < tamanhoEsperado){ 
-		printf("%s Inválido!!!",nome);
+		printf("\n%s Inválido!!!",nome);
 		return 0;
 	} 
 	return 1;
@@ -59,7 +59,7 @@ void cadastroUsuario(struct Usuario usuario[], int *cadastro){
 	fgets(usuario[index].cpf, 50, stdin);
 	usuario[index].cpf[strcspn(usuario[index].cpf, "\n")] = '\0';
 	tamanhoCpf = strlen(usuario[index].cpf);
-	}while(!verificacao(tamanhoCpf], 11, "CPF") || !somenteNumeros(usuario[index].cpf));
+	}while(!verificacao(tamanhoCpf, 11, "CPF") || !somenteNumeros(usuario[index].cpf));
 	  
 	printf("\nInforme Nome de usuário: ");
  fgets(usuario[index].usuario, 50, stdin);
