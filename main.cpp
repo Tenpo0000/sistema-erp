@@ -25,7 +25,7 @@ struct Usuario usuario[USU];
 
 int verificacao(int entrada, int tamanhoEsperado, char *nome){  //verifica se determinada variavel tem um numero expecifico
 	if (entrada < tamanhoEsperado){ 
-		printf("\n%s Inválido!!!",nome);
+		printf("%s Inválido!!!\n",nome);
 		return 0;
 	} 
 	return 1;
